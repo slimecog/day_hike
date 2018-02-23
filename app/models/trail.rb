@@ -1,3 +1,3 @@
 class Trail < ApplicationRecord
-
-end 
+  has_and_belongs_to_many :trips
+end
