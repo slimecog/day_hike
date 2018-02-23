@@ -3,7 +3,8 @@
 <% @trip.trails.each do |trail| %>
   trail length: <%= trail.length %>
   trail name: <%= trail.name %>
-  trail address: <%= trail.address %> <br> 
+  trail address: <%= trail.address %> <br>
 <% end %>
 
-total hiking distance: <%= @trip.total_hiking_distance %>
+total hiking distance: <%= @trip.total_hiking_distance %> <br>
+average hiking distance: <%= @trip.average_hiking_distance %> <br>
