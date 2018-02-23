@@ -15,6 +15,7 @@ describe "as a visitor" do
 
         expect(page).to have_content("trips page")
         expect(page).to have_link("#{trip1.name}")
+        expect(page).to have_link("#{trip2.name}")
 
         click_on "#{trip1.name}"
 
@@ -29,7 +30,6 @@ describe "as a visitor" do
 
       it "show total hiking distance of trip" do
         trip1 = Trip.create!(name: "trip1", start_date: Date.today, end_date: Date.today)
-        trip2 = Trip.create!(name: "trip2", start_date: Date.today, end_date: Date.today)
         trail1 = Trail.create!(length: 10, name: "trail1", address: "10 trail ln")
         trail2 = Trail.create!(length: 20, name: "trail2", address: "20 trail ln")
         trip1.trails << trail1
@@ -42,7 +42,6 @@ describe "as a visitor" do
 
       it "show average hiking distance of trip" do
         trip1 = Trip.create!(name: "trip1", start_date: Date.today, end_date: Date.today)
-        trip2 = Trip.create!(name: "trip2", start_date: Date.today, end_date: Date.today)
         trail1 = Trail.create!(length: 10, name: "trail1", address: "10 trail ln")
         trail2 = Trail.create!(length: 20, name: "trail2", address: "20 trail ln")
         trip1.trails << trail1
@@ -55,7 +54,6 @@ describe "as a visitor" do
 
       it "show longest hiking distance of trip" do
         trip1 = Trip.create!(name: "trip1", start_date: Date.today, end_date: Date.today)
-        trip2 = Trip.create!(name: "trip2", start_date: Date.today, end_date: Date.today)
         trail1 = Trail.create!(length: 10, name: "trail1", address: "10 trail ln")
         trail2 = Trail.create!(length: 20, name: "trail2", address: "20 trail ln")
         trip1.trails << trail1
@@ -68,7 +66,6 @@ describe "as a visitor" do
 
       it "show shortest hiking distance of trip" do
         trip1 = Trip.create!(name: "trip1", start_date: Date.today, end_date: Date.today)
-        trip2 = Trip.create!(name: "trip2", start_date: Date.today, end_date: Date.today)
         trail1 = Trail.create!(length: 10, name: "trail1", address: "10 trail ln")
         trail2 = Trail.create!(length: 20, name: "trail2", address: "20 trail ln")
         trip1.trails << trail1
