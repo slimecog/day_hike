@@ -12,4 +12,8 @@ class Trip < ApplicationRecord
   def longest_hiking_distance
     self.trails.maximum(:length)
   end
+
+  def shortest_hiking_distance
+    self.trails.minimum(:length)
+  end
 end
